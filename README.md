@@ -26,14 +26,23 @@ Von der Idee bis zur Umsetzung....
 
 **Funktionale Anforderungen:**
 Funktionale Anforderungen (Was muss die Anwendung können?)
+
 ✅ Wikipedia-Artikel über eine API abrufen
+
 ✅ Einen IT-Begriff zufällig auswählen oder gezielt suchen
+
 ✅ Titel und Zusammenfassung des Begriffs anzeigen
+
 🔒 Passendes Bild anzeigen (z. B. über eine KI- oder Bild-API)
+
 🔒 Sprache umschalten (z. B. Deutsch / Englisch)
+
 🔒 Timer-Funktion aktivieren, z. B. 5 Minuten Fokus-Zeit
+
 🔒 Button „Neues Thema laden“ starten neuen Abruf
+
 🔒 Inhalte nach Themen filtern (optional)
+
 🔒 Musik im Hintergrund abspielen (Fokusmodus, optional)
 
 
