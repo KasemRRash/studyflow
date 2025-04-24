@@ -1,0 +1,28 @@
+# === Maven ===
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# === Eclipse ===
+#.classpath
+#.project
+.settings/
+.metadata/
+
+# === Logs ===
+*.log
+
+# === OS-spezifisch ===
+.DS_Store
+Thumbs.db
+
+# === Docker ===
+*.env
+*.pid
+*.tar
+docker-compose.override.yml
+
+# === Backup-Dateien (z.B. von Editoren) ===
+*~
+
+# === Ausführende Scripte === 
+!build-and-run.sh

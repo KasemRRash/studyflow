@@ -1,0 +1,29 @@
+# StudyFlow
+
+Ein Maven-basiertes Java-Projekt, das innerhalb eines Docker-Containers läuft. Dieses Projekt dient Studien- und Lernzwecken.
+
+## 🔧 Voraussetzungen
+
+- Java 17+
+- Maven 4.0
+- Spring Boot 3.2.2
+- Docker & Docker Compose
+- Bash (für `build-and-run.sh`)
+
+## 🚀 Build & Run
+
+```bash
+./build-and-run.sh
+
+Das Script muss mit UNIX-Zeilenende (LF) gespeichert werden.
+Oft ist Git so konfiguriert, dass beim Checkout auf Windows CRLF verwendet wird und dadurch Fehler entstehen können. 
+Daher bitte vor dem check-out folgende Einstellung konfigurieren:
+
+git config --global core.autocrlf input
+
+bedeutet: Beim Commit wird in CRLF umgewandelt, beim Checkout bleibt alles wie es ist
+
+
+## Nice to know 
+Die niceToKnow Datei dient zum Austausch. Dort sind Informationen notiert, die nicht in der README enthalten sind.  
+
