@@ -61,6 +61,10 @@ Funktionale Anforderungen (Was muss die Anwendung können?)
 
 - Das System soll auch funktionieren, wenn eine API nicht erreichbar ist (Fehlerbehandlung)
 
+
+**LINKS:**
+- https://www.figma.com/board/SNvGnrRe5fQ1FU1IlCuyBF/Untitled?node-id=0-1&p=f&t=9rUB2bkOHGUTdTM4-0 (Wireframe)
+- https://studyflow.atlassian.net/jira/core/projects/STUD/board?groupBy=status (Aufgaben)
 - Inhalte sollen mindestens auf Deutsch und Englisch verfügbar sein
 
 
