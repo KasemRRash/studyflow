@@ -1,4 +1,10 @@
 # studyflow
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a7fc3825-2f55-4be8-a3fd-77380bf93173" alt="studyflow" width="200"/>
+</p>
+
+
 STILL WORKING....StudyFlow - IT-Wissensplattform mit API-Anbindung
 Von der Idee bis zur Umsetzung....
 
