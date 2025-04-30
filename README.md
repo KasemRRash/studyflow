@@ -9,6 +9,7 @@ Von der Idee bis zur Umsetzung....
 2) Titel und Zusammenfassung auf der Webseite darstellen
 3) Button „Neues Thema laden“
 4) Bild automatisch generieren zum passenden Thema.
+5) Von HTML auf PDF (ganze Seite generieren) -> https://html2pdf.app/
 
 ![image](https://github.com/user-attachments/assets/8832927b-544c-4ece-928e-6a3da62b1aea)
 
@@ -24,6 +25,7 @@ Von der Idee bis zur Umsetzung....
 
 **Backend:**
 - Java Servlet mit Tomcat
+- Python/Bash ---> steht noch offen
 
 **Funktionalitäten:**
 
