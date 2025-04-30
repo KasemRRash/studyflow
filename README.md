@@ -8,6 +8,10 @@ Von der Idee bis zur Umsetzung....
 1) Wikipedia-Artikel zu einem IT-Begriff anzeigen (per API)
 2) Titel und Zusammenfassung auf der Webseite darstellen
 3) Button „Neues Thema laden“
+4) Bild automatisch generieren zum passenden Thema.
+
+![image](https://github.com/user-attachments/assets/8832927b-544c-4ece-928e-6a3da62b1aea)
+
 
 **PLANUNG:**
 ![projektx](https://github.com/user-attachments/assets/adaa597c-1bb6-47cc-9225-2fd8fa993840)
