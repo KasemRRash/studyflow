@@ -16,6 +16,7 @@ Von der Idee bis zur Umsetzung....
 3) Button „Neues Thema laden“
 4) Bild automatisch generieren zum passenden Thema.
 5) Von HTML auf PDF (ganze Seite generieren) -> https://html2pdf.app/
+6) Youtube-Data-API für Videos zu passendem Thema
 
 ![image](https://github.com/user-attachments/assets/8832927b-544c-4ece-928e-6a3da62b1aea)
 
@@ -45,7 +46,9 @@ Funktionale Anforderungen (Was muss die Anwendung können?)
 
 ✅ Titel und Zusammenfassung des Begriffs anzeigen
 
-🔒 Passendes Bild anzeigen (z. B. über eine KI- oder Bild-API)
+🔒 1 passendes Video (von Youtube Data-API)
+
+🔒 3 Passende Bilder anzeigen (z. B. über eine KI- oder Bild-API)
 
 🔒 Sprache umschalten (z. B. Deutsch / Englisch)
 
