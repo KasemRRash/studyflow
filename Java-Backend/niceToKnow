@@ -1,0 +1,13 @@
+http://localhost:8080/api/knowledge
+http://localhost:8080/swagger-ui.html 
+
+# wiki seiten 
+https://de.wikipedia.org/api/rest_v1/page/summary/<title>
+
+# docker
+docker build -t studyflow-api .
+docker run -p 8080:8080 studyflow-api
+
+# maven
+# Build ausführen
+mvn clean package
