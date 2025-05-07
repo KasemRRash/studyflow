@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Studyflow – Bilder suchen</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2rem; }
+        #bilder { display: flex; gap: 1rem; flex-wrap: wrap; }
+        #bilder img { max-width: 30%; border: 1px solid #ccc; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>Studyflow – Bilder zu Informatik</h1>
+    <form id="sucheForm">
+        <input type="text" id="query" placeholder="Suchbegriff (z. B. computer science)" />
+        <button type="submit">Suche Bilder</button>
+    </form>
+    <div id="bilder">Gib einen Suchbegriff ein und drücke „Suche Bilder“.&#8203;</div>
+
+    <script>
+    document.getElementById("sucheForm").addEventListener("submit", async e => {
+        e.preventDefault();
+        const q = document.getElementById("query").value.trim() || "Python";
+        const res = await fetch(`/bilder?query=${encodeURIComponent(q)}`);
+        const data = await res.json();
+        console.log("API-Antwort:", data);
+
+        const cont = document.getElementById("bilder");
+        cont.innerHTML = "";  
+        if (!data.bilder || data.bilder.length === 0) {
+            cont.textContent = "Keine Bilder gefunden – probiere andere Stichworte (z. B. ‚computer science‘).";
+            return;
+        }
+        data.bilder.forEach(url => {
+            const img = document.createElement("img");
+            img.src = url;
+            img.alt = q;
+            cont.appendChild(img);
+        });
+    });
+    </script>
+</body>
+</html>
+

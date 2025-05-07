@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyFlow - IT-Wissensplattform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      }
+    </script>
+  </head>
+  <body class="bg-[#f2e9e4] text-[#22223b] dark:bg-[#1a1a1a] dark:text-white font-sans">
+    <header class="bg-[#22223b] text-white p-4 dark:bg-black">
+      <nav class="flex flex-wrap justify-between items-center">
+        <div class="flex items-center gap-4">
+          <div class="text-xl font-bold">StudyFlow</div>
+          <div class="flex items-center bg-white text-black rounded px-2 dark:bg-gray-800 dark:text-white">
+            <span>🔍</span>
+            <input type="text" id="searchInput" placeholder="Thema suchen" class="p-1 outline-none bg-transparent" />
+          </div>
+        </div>
+        <div class="flex gap-4 mt-2 sm:mt-0">
+          <a href="#" class="hover:underline">Home</a>
+          <a href="#" class="hover:underline">Über uns</a>
+<!-- Am besten in deiner <nav> innerhalb des headers -->
+  <button id="pdfDownload" class="hover:underline flex items-center gap-1">
+    <i class="fa-solid fa-download"></i>
+    Download
+  </button>
+  
+  
+       <!---   <button class="hover:underline">☰</button> -->
+        </div>
+      </nav>
+    </header>
+    <div class="flex items-center gap-4 mt-2 sm:mt-0">
+      <button id="toggleDark" class="ml-4 px-3 py-1 rounded text-sm font-medium shadow-md
+        bg-white text-black hover:bg-gray-100 border border-gray-300
+        dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 transition">
+        🌙 Dark Mode
+      </button>
+    </div>
+    
+
+
+ 
+    
+    <button id="newTopic" onclick="ladeInhalt()" class="block mx-auto my-6 px-4 py-2 bg-[#4a4e69] text-white rounded hover:bg-[#3b3f59] dark:bg-blue-700">Thema generieren</button>
+
+    <main class="px-4 max-w-5xl mx-auto">
+      <h1 class="text-2xl font-bold text-center mb-4">Thema: <span id="title"></span></h1>
+
+      <div class="text-center text-lg mb-4" id="summary">
+        
+      </div>
+
+      <div class="flex justify-center mb-6">
+        <iframe id="videoFrame" class="w-full max-w-3xl aspect-video rounded-lg shadow" src="https://www.youtube-nocookie.com/embed/2ePf9rue1Ao" allowfullscreen></iframe>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold mb-2 text-center">Bilder:</h2>
+
+        <div class="flex flex-wrap justify-around gap-4 mb-8">
+          <img id="img1" class="w-52 rounded shadow object-cover h-32" alt="Bild 1" />
+          <img id="img2" class="w-52 rounded shadow object-cover h-32" alt="Bild 2" />
+          <img id="img3" class="w-52 rounded shadow object-cover h-32" alt="Bild 3" />
+        </div>
+      </div>
+
+      <section class="bg-[#9a8c98] text-white p-6 rounded mb-6 dark:bg-gray-700">
+        <h2 class="text-xl font-semibold mb-2">Die Idee dahinter:</h2>
+        <p>
+          StudyFlow ist eine innovative Webanwendung für Studierende und IT-Interessierte, die Lernen mit Fokus, Technik und kreativen Impulsen verbindet...
+        </p>
+      </section>
+
+      <section class="text-center mb-10">
+        <h3 class="text-lg font-semibold mb-2">🎧 Fokusmusik</h3>
+        <audio controls autoplay loop class="mx-auto">
+          <source src="https://soundcloud.com/relaxingmusicforreading/calm-music-pt-1?in=relaxingmusicforreading/sets/01-calm-music-to-814001406" type="audio/mp3" />
+          Dein Browser unterstützt kein Audio.
+        </audio>
+      </section>
+
+     
+              
+              
+
+      <section class="text-center mb-10">
+        <h3 class="text-lg font-semibold">🕒 <span id="phase">Fokus</span>: <span id="timer">25:00</span></h3>
+        <button onclick="startPomodoro()" class="bg-green-600 text-white px-4 py-2 rounded m-2">Start</button>
+        <button onclick="resetPomodoro()" class="bg-red-600 text-white px-4 py-2 rounded m-2">Reset</button>
+      </section>
+    </main>
+
+    <footer class="bg-[#22223b] text-white text-center py-4 dark:bg-black">
+      © StudyFlow 2025
+    </footer>
+
+    <script src="/static/script.js"></script>
+    <script>
+      document.getElementById("searchBtn").addEventListener("click", async () => {
+        // 1. Wert aus dem Eingabefeld
+        const query = document.getElementById("searchInput").value.trim();
+        if (!query) {
+          alert("Bitte gib zuerst ein Thema ein!");
+          return;
+        }
+    
+        // 2. Alle Endpunkte parallel anfragen
+        const [wikiRes, bildRes, ytRes, dalleRes] = await Promise.all([
+          fetch(`/wiki?query=${encodeURIComponent(query)}`).then(r => r.json()),
+          fetch(`/bilder?query=${encodeURIComponent(query)}`).then(r => r.json()),
+          fetch(`/youtube?query=${encodeURIComponent(query)}`).then(r => r.json()),
+          fetch(`/dalle?query=${encodeURIComponent(query)}`).then(r => r.json())
+        ]);
+    
+        // 3. Anzeige aktualisieren
+        document.getElementById("wiki").innerText = wikiRes.summary || "Keine Zusammenfassung gefunden.";
+        
+        // Stock-Bilder + KI-Bilder
+        const imgContainer = document.getElementById("images");
+        imgContainer.innerHTML = "";
+        (bildRes.bilder || []).forEach(u => {
+          imgContainer.innerHTML += `<img src="${u}" width="200" alt="${query}"/>`;
+        });
+        (dalleRes.images || []).forEach(u => {
+          imgContainer.innerHTML += `<img src="${u}" width="200" alt="KI: ${query}"/>`;
+        });
+    
+        // YouTube-Video
+        const vidId = ytRes.videoId;
+        document.getElementById("video").innerHTML = vidId
+          ? `<iframe width="560" height="315"
+                src="https://www.youtube.com/embed/${vidId}"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>`
+          : "Kein Video gefunden.";
+      });
+    </script>
+    
+  </body>
+</html>
