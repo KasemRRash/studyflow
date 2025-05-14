@@ -68,7 +68,11 @@ Im Rahmen unseres Projekts haben wir gemeinsam einen Zeitplan mit den wichtigste
 
 ## 8. Business-Voraussetzungen und Zielgruppe
 
-Unsere primäre Zielgruppe besteht aus Studierenden und Selbstlernenden mit IT-Bezug. Die Plattform soll dauerhaft kostenlos und möglichst als Open-Source-Projekt zur Verfügung stehen. Der Betrieb ist lokal oder über einfache Hostinglösungen wie Docker möglich. Perspektivisch möchten wir zusätzliche Funktionen wie Benutzerkonten, Kalender, Notizen und persönliche Empfehlungen einführen. Eine spätere Monetarisierung durch Premium-Funktionen oder Community-Support ist denkbar, steht jedoch aktuell nicht im Fokus.
+Unsere primäre Zielgruppe besteht aus Studierenden und Selbstlernenden mit IT-Bezug. Die Plattform soll dauerhaft kostenlos und möglichst als Open-Source-Projekt zur Verfügung stehen. Der Betrieb ist lokal oder über einfache Hostinglösungen wie Docker möglich.
+
+Ergänzend richtet sich StudyFlow auch an Content Creator, insbesondere YouTuber, die ihre Lernvideos gezielt einem interessierten IT-Publikum präsentieren möchten. Durch die Integration thematisch passender YouTube-Videos als ergänzender Lerninhalt können YouTuber ihre Reichweite steigern und ihre Inhalte effektiv promoten. Die Plattform bietet somit einen Mehrwert sowohl für Lernende als auch für YouTuber, da sie gezielt nach Themen sortiert und eingebettet angezeigt werden.
+
+Perspektivisch möchten wir zusätzliche Funktionen wie Benutzerkonten, Kalender, Notizen und persönliche Empfehlungen einführen. Eine spätere Monetarisierung durch Premium-Funktionen oder Community-Support ist denkbar, steht jedoch aktuell nicht im Fokus.
 
 ---
 
