@@ -6,7 +6,7 @@
 
 
 STILL WORKING....StudyFlow - IT-Wissensplattform mit API-Anbindung
-Von der Idee bis zur Umsetzung....
+Von der Idee bis zur Umsetzung...
 
 **IDEE:**
 ![idee](https://github.com/user-attachments/assets/14e8514c-06ed-415e-ba6f-e10d4a7d0291)
