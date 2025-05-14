@@ -52,8 +52,8 @@ Unsere Teamarbeit orientiert sich an agilen Prinzipien. Die Planung und Aufgaben
 
 
 **Wireframes:**
+![studyflow](https://github.com/user-attachments/assets/153f3a29-2136-418c-8559-f203ba37630a)
 
-<img width="1696" alt="wireframe" src="https://github.com/user-attachments/assets/f7ce123b-e8ce-46ef-8f11-2fc3ac500f25" />
 Die grafischen Wireframes wurden mit Figma erstellt und zeigen das visuelle Konzept von StudyFlow in verschiedenen Darstellungsformen. Dabei liegt der Fokus auf einer klaren Benutzerführung: In der Desktop-Ansicht steht das aktuelle IT-Thema mit eingebettetem Video, Kurzbeschreibung und drei passenden Bildern im Zentrum. Ein Button ermöglicht es, ein neues Thema zu laden. Darunter befindet sich ein erklärender Abschnitt zur Idee hinter StudyFlow. Ergänzt wird das Layout durch eine integrierte Musiksteuerung sowie eine visuelle Timeranzeige im Pomodoro-Stil. Diese Gestaltungsideen wurden im späteren Design iterativ umgesetzt.
 
 
