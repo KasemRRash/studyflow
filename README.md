@@ -1,80 +1,47 @@
-# studyflow
+# 📚 StudyFlow – Interaktive IT-Wissensplattform
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/a7fc3825-2f55-4be8-a3fd-77380bf93173" alt="studyflow" width="200"/>
-</p>
+**StudyFlow** ist eine moderne, webbasierte Anwendung zur strukturierten und fokussierten Vermittlung von IT-Wissen.  
+Die Plattform kombiniert automatisch generierte Inhalte aus Wikipedia, YouTube und Unsplash und ergänzt sie um lernfördernde Funktionen wie Timer, Dark Mode und Themenfilter.  
+Ideal für Studierende, Selbstlernende und Content-Creator.
 
+---
 
-STILL WORKING....StudyFlow - IT-Wissensplattform mit API-Anbindung
-Von der Idee bis zur Umsetzung...
+## 🔍 Features
 
-**IDEE:**
-![idee](https://github.com/user-attachments/assets/14e8514c-06ed-415e-ba6f-e10d4a7d0291)
+- 📖 **IT-Wissenshappen** aus Kategorien wie Linux, Datenbanken, KI
+- 🧠 Inhalte automatisch über folgende APIs:
+  - Wikipedia REST API
+  - YouTube Data API
+  - Unsplash API
+- 🎯 **Fokus-Tools**: Lern-Timer, Dark Mode, Themenfilter, Zufallsgenerator
+- 📄 **Exportfunktion**: Inhalte als PDF speichern (HTML2PDF)
+- 📱 **Responsive Design** für Desktop und Mobile
 
-1) Wikipedia-Artikel zu einem IT-Begriff anzeigen (per API)
-2) Titel und Zusammenfassung auf der Webseite darstellen
-3) Button „Neues Thema laden“
-4) Bild automatisch generieren zum passenden Thema.
-5) Von HTML auf PDF (ganze Seite generieren) -> https://html2pdf.app/
-6) Youtube-Data-API für Videos zu passendem Thema
+---
 
-![image](https://github.com/user-attachments/assets/8832927b-544c-4ece-928e-6a3da62b1aea)
+## 🛠 Technologien
 
+| Bereich     | Tools / Frameworks                          |
+|------------|---------------------------------------------|
+| Frontend   | HTML, Tailwind CSS, JavaScript              |
+| Backend    | Python (Flask, geplante API-Steuerung)      |
+| APIs       | Wikipedia, YouTube, Unsplash, HTML2PDF      |
+| Sonstiges  | JSON-Datenstruktur, optional: Bash & Docker |
 
-**PLANUNG:**
-![projektx](https://github.com/user-attachments/assets/adaa597c-1bb6-47cc-9225-2fd8fa993840)
+---
 
-**Technologien:**
-- Java, MariaDB, Apache, Javascript, HTML, Docker
+## 💡 Zielgruppe & Vision
 
-**Frontend:**
-- HTML, CSS, Javascript
+StudyFlow richtet sich an:
+- Studierende & Selbstlernende im IT-Bereich
+- Dozierende & Bildungseinrichtungen
+- YouTuber & Content-Creator (gezielte Video-Einbettung)
 
-**Backend:**
-- Java Servlet mit Tomcat
-- Python/Bash ---> steht noch offen
+Zukünftig geplant:
+- Benutzerkonten & persönliche Dashboards  
+- Quiz-Modul & Favoriten  
+- KI-generierte Themenvorschläge  
+- Open-Source-Ausbau mit Community-Support
 
-**Funktionalitäten:**
+---
 
-
-**Funktionale Anforderungen:**
-Funktionale Anforderungen (Was muss die Anwendung können?)
-
-✅ Wikipedia-Artikel über eine API abrufen
-
-✅ Einen IT-Begriff zufällig auswählen oder gezielt suchen
-
-✅ Titel und Zusammenfassung des Begriffs anzeigen
-
-🔒 1 passendes Video (von Youtube Data-API)
-
-🔒 3 Passende Bilder anzeigen (z. B. über eine KI- oder Bild-API)
-
-🔒 Sprache umschalten (z. B. Deutsch / Englisch)
-
-🔒 Timer-Funktion aktivieren, z. B. 5 Minuten Fokus-Zeit
-
-🔒 Button „Neues Thema laden“ starten neuen Abruf
-
-🔒 Inhalte nach Themen filtern (optional)
-
-🔒 Musik im Hintergrund abspielen (Fokusmodus, optional)
-
-
-**Nicht-funktionale Anforderungen:**
-- Das System soll schnell reagieren, Ladezeiten sollen unter zwei Sekunden bleiben
-
-- Die Benutzeroberfläche soll sich an verschiedene Bildschirmgrößen anpassen (responsive Design)
-
-- Das Design soll modern und ansprechend wirken, besonders für junge Nutzerinnen und Nutzer
-
-- Das System soll auch funktionieren, wenn eine API nicht erreichbar ist (Fehlerbehandlung)
-
-
-**LINKS:**
-- https://www.figma.com/board/SNvGnrRe5fQ1FU1IlCuyBF/Untitled?node-id=0-1&p=f&t=9rUB2bkOHGUTdTM4-0 (Wireframe)
-- https://studyflow.atlassian.net/jira/core/projects/STUD/board?groupBy=status (Aufgaben)
-- Inhalte sollen mindestens auf Deutsch und Englisch verfügbar sein
-
-
-**Zielgruppen/Personas:** Schüler, Studierende, Interessierte
