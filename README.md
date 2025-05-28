@@ -26,7 +26,7 @@ Ideal für Studierende, Selbstlernende und Content-Creator.
 | Frontend   | HTML, Tailwind CSS, JavaScript              |
 | Backend    | Python (Flask, geplante API-Steuerung)      |
 | APIs       | Wikipedia, YouTube, Unsplash, HTML2PDF      |
-| Sonstiges  | JSON-Datenstruktur, optional: Bash & Docker |
+
 
 ---
 
