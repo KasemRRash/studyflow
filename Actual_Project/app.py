@@ -17,7 +17,7 @@ def youtube():
     query = request.args.get("query", "Python Programmierung")
     params = {
         "part": "snippet",
-        "q": query,              # ggf. + " tutorial deutsch"
+        "q": query,             
         "type": "video",
         "maxResults": 5,
         "videoEmbeddable": "true",
@@ -36,7 +36,7 @@ def youtube():
         print(f"  #{i} kind={kind} videoId={vid} title={title}")
     print("=============================\n")
 
-    # dann deine Auswahl-Logik…
+
     items = data.get("items", [])
     video_id = ""
     for itm in items:
@@ -69,7 +69,7 @@ def bilder():
 @app.route("/download-pdf")
 def download_pdf():
     from flask import redirect
-    public_url = "https://kasem-rashrash.com"  # öffentliche Seite
+    public_url = "https://kasem-rashrash.com" 
     api_key = os.getenv("HTML2PDF_API_KEY")
     
     pdf_url = f"https://api.html2pdf.app/v1/generate?url={public_url}&apiKey={api_key}&filename=studyflow.pdf"
