@@ -4,6 +4,9 @@
 Die Plattform kombiniert automatisch generierte Inhalte aus Wikipedia, YouTube und Unsplash und ergänzt sie um lernfördernde Funktionen wie Timer, Dark Mode und Themenfilter.  
 Ideal für Studierende, Selbstlernende und Content-Creator.
 
+![studyflow (5)](https://github.com/user-attachments/assets/bbb14202-7c68-4361-ab58-39795d778acf)
+PRÄSENTATION LINK: https://kasem-rashrash.com/StudyFlow-Demo-Pr%C3%A4sentation.pdf
+
 ---
 
 ## 🔍 Features
